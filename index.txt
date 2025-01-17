@@ -1,0 +1,4 @@
+create project 
+npx create-next-app@14.2.15 .
+initliaze shadcn ui
+npx shadcn@latest init
