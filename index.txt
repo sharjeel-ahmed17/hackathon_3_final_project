@@ -4,3 +4,10 @@ npx create-next-app@14.2.15 .
 npx shadcn@latest init
 //intrigate sanity 
 npm create sanity@latest -- --project <replace your own> --dataset production --template clean
+
+src 
+actions
+contexts
+hooks
+script
+services
