@@ -2,7 +2,7 @@
 
 index.txt
 script
-
+importData.js
 # dependencies
 /node_modules
 /.pnp
