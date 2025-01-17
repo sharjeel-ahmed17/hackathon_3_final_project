@@ -1,4 +1,6 @@
-create project 
+//create project 
 npx create-next-app@14.2.15 .
-initliaze shadcn ui
+//initliaze shadcn ui
 npx shadcn@latest init
+//intrigate sanity 
+npm create sanity@latest -- --project <replace your own> --dataset production --template clean
