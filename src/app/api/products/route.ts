@@ -8,7 +8,7 @@ export async function GET() {
   name,
   description,
   price,
-  "imageUrl" : image.asset->url,
+  "image" : image.asset->url,
   category,
   discountPercent,
   "isNew": new,

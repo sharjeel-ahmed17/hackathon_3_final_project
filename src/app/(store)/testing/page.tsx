@@ -1,13 +1,15 @@
 import { client } from "@/sanity/lib/client";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
+import GridProducts from "./GridProduct";
+import BLog from "./blog";
 
 // Function to fetch all products
 const getAllproducts = async () => {
   try {
     const products = await client.fetch(
       `
-      *[_type == 'product']{
+      *[_type == 'product'][0..3]{
         name,
         description,
         price,
@@ -35,7 +37,7 @@ const Testing = async () => {
 
   return (
     <div>
-      {products.map((product: IProduct, index: number) => (
+      {/* {products.map((product: IProduct, index: number) => (
         <div key={index}>
           <h3>{product.name}</h3>
           <p>{product.description}</p>
@@ -49,7 +51,16 @@ const Testing = async () => {
           />
           <p>{product.price}</p>
         </div>
-      ))}
+      ))} */}
+
+{/* grid products */}
+
+      <div>
+        <GridProducts products={products}/>
+        
+      </div>
+      {/* grid comp 2 testing */}
+      <BLog />
     </div>
   );
 };
