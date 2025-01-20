@@ -1,3 +1,4 @@
+import Brand from "@/components/home/brand/Brand"
 import Browse from "@/components/home/browse/Browse"
 import Hero from "@/components/home/hero/Hero"
 import NewArrival from "@/components/home/newarrival/NewArrival"
@@ -9,6 +10,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
+      <Brand />
       <NewArrival />
       <TopSelling />
       <Browse />

@@ -3,6 +3,15 @@ import { client } from "@/sanity/lib/client";
 import React from "react";
 import GridProducts from "./GridProduct";
 import BLog from "./blog";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+// import Hero from "./h";
 
 // Function to fetch all products
 const getAllproducts = async () => {
@@ -37,6 +46,11 @@ const Testing = async () => {
 
   return (
     <div>
+      {/* hero component */}
+      <div>
+        {/* <Hero /> */}
+
+      </div>
       {/* {products.map((product: IProduct, index: number) => (
         <div key={index}>
           <h3>{product.name}</h3>
@@ -54,13 +68,31 @@ const Testing = async () => {
       ))} */}
 
 {/* grid products */}
-
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+<div className="mb-20"></div>
       <div>
         <GridProducts products={products}/>
         
       </div>
       {/* grid comp 2 testing */}
       <BLog />
+      {/*bradcrums */}
+     
+
     </div>
   );
 };

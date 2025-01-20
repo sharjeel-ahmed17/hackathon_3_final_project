@@ -1,4 +1,5 @@
 import { Product } from "@/types/types";
+import { Star, StarHalf } from "lucide-react";
 // import { Star, StarHalf } from "lucide-react";
 // import Image from "next/image";
 interface IProduct {
@@ -17,24 +18,30 @@ const ProductCard = ({ product }: IProduct) => {
           alt="blog"
         />
         <div className="">
-          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+         
+          <h3 className="title-font text-lg font-medium text-gray-900 mb-3">
             {product.name}
-          </h2>
-          <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-            {product.name}
-          </h1>
-          <p className="leading-relaxed mb-3 truncate">{product.description}</p>
-          <div className="flex items-center flex-wrap ">
-            <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
-              Learn More
-            </a>
-            <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-              1.2K
-            </span>
-            <span className="text-gray-400 inline-flex items-center leading-none text-sm">
-              6
-            </span>
+          </h3>
+        <div className="flex gap-1">
+          <Star  fill="brown" stroke="none" size={18}/>
+          <Star  fill="brown" stroke="none" size={18}/>
+          <Star  fill="brown" stroke="none" size={18}/>
+          <Star  fill="brown" stroke="none" size={18}/>
+          <StarHalf  fill="brown" stroke="none" size={18}/>
+          <div>
+            <span>3.5/</span>
+            <span>5</span>
           </div>
+        </div>
+{/* price */}
+         <div className="flex gap-4">
+          <p>$120</p>
+          {/* discount percentage */}
+          <div className="flex gap-4">
+            <p>$260</p>
+            <div>-20%</div>
+          </div>
+         </div>
         </div>
       </div>
     </div>
