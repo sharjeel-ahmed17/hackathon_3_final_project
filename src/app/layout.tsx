@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-[1440px] mx-auto md:px-4 px-2">
 
         
         <Topbar/>

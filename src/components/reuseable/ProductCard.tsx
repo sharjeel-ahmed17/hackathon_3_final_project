@@ -1,5 +1,4 @@
 import { Product } from "@/types/types";
-import { Star, StarHalf } from "lucide-react";
 // import { Star, StarHalf } from "lucide-react";
 // import Image from "next/image";
 interface IProduct {
@@ -18,22 +17,13 @@ const ProductCard = ({ product }: IProduct) => {
           alt="blog"
         />
         <div className="">
-         
-          <h3 className="title-font text-lg font-medium text-gray-900 mb-3">
+          <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
             {product.name}
-          </h3>
-        <div className="flex gap-1">
-          <Star  fill="brown" stroke="none" size={18}/>
-          <Star  fill="brown" stroke="none" size={18}/>
-          <Star  fill="brown" stroke="none" size={18}/>
-          <Star  fill="brown" stroke="none" size={18}/>
-          <StarHalf  fill="brown" stroke="none" size={18}/>
-          <div>
-            <span>3.5</span>
-            <span>5</span>
-          </div>
-        </div>
-
+          </h2>
+          <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+            {product.name}
+          </h1>
+          <p className="leading-relaxed mb-3 truncate">{product.description}</p>
           <div className="flex items-center flex-wrap ">
             <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
               Learn More
