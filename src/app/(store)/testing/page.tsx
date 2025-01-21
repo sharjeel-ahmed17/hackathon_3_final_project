@@ -11,6 +11,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import ProductListingPage from "./ProductListingTest";
 // import Hero from "./h";
 
 // Function to fetch all products
@@ -32,6 +33,19 @@ const getAllproducts = async () => {
     return []; // Return an empty array in case of an error
   }
 };
+const getAllproductsForfilter = async () => {
+  try {
+    const products = await client.fetch(
+      `
+      *[_type == 'product']
+      `
+    );
+    return products;
+  } catch (error) {
+    console.log(error);
+    return []; // Return an empty array in case of an error
+  }
+};
 
 // Defining the TypeScript interface for a product
 interface IProduct {
@@ -43,9 +57,12 @@ interface IProduct {
 
 const Testing = async () => {
   const products = await getAllproducts();
+const data = await getAllproductsForfilter();
+// console.log(data.length);
 
   return (
     <div>
+      <ProductListingPage products={data}/>
       {/* hero component */}
       <div>
         {/* <Hero /> */}

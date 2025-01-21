@@ -6,7 +6,10 @@ import Topbar from "@/components/common/topbar/Topbar";
 import Cta from "@/components/common/cta/Cta";
 import Footer from "@/components/common/footer/Footer";
 import Container from "@/components/reuseable/Container";
-
+import { CartProvider } from "@/contexts/CartContext";
+import { Toaster } from "@/components/ui/toaster"
+import { Suspense } from "react";
+import Loading from "./loading";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -37,12 +40,18 @@ export default function RootLayout({
 
         
         <Topbar/>
+<CartProvider>
+
         <Header />
         <Container>
 
-
+        <Suspense fallback={<Loading />}>
         {children}
+        </Suspense>
+        <Toaster />
         </Container>
+</CartProvider>
+
         <Cta />
         <Footer />
         </div>
